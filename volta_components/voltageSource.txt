@@ -1,0 +1,5 @@
+def voltageSource () :
+
+	property voltage;
+
+	output voltage;

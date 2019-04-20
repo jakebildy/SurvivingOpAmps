@@ -1,0 +1,5 @@
+micro-,μ
+ohm,Ω
+~+,⁺
+~-,⁻
+integral,∫

@@ -1,0 +1,8 @@
+def resistor (voltage V_in, current I_R) :
+	
+	property R; #the resistance
+
+	V_out = V_in - ( R * I_R );
+
+	output V_out;
+
