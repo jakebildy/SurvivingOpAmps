@@ -1,0 +1,3 @@
+V_out = 1 / C * integral I dt + V_in; # Capacitor
+
+V_out = V_in - ( R * I_R ); # Resistor

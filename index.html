@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Voltage Multiplier</title>
+</head>
+
+<body style="background:black">
+
+<div style="float:left; color:white; background:black; font-family: Menlo,serif;">
+
+    <div style="height:50px; width:600px; color:lightgrey; font-size: x-large; ">Circuit <br></div>
+
+
+<img src="images/op_amp.png" style="filter:invert(100%)">
+</div>
+<div style="float:right; color:white; background:black; font-family: Menlo,serif;">
+    <div style="height:50px; width:600px; color:lightgrey; font-size: x-large; ">Pseudocode <br>
+    </div>
+
+<div id="volta"  style="height:470px; width:600px; font-size: medium;">
+
+    <br>
+
+    def VoltageMultiplier (voltage V_1, voltage V_2) : <br>
+    &emsp; <br>
+    &emsp; <a1 style="color:grey;">#C_1</a1><br>
+    &emsp; U_1 = 1 / C * integral I dt + V_in;  <br>
+    &emsp; <br>
+    &emsp; <a1 style="color:grey;">#R_1</a1><br>
+    &emsp; U_2 = U_1 - ( R * I_R );<br>
+    &emsp; <br>
+    &emsp; <a1 style="color:grey;">#OpAmp</a1><br>
+    &emsp; V_out = OpAmp(U_2, 0V, 1V, 0V).output <br>
+    &emsp; <br>
+    &emsp; output V_out <br>
+
+
+    <br><br>
+
+    def OpAmp (voltage u~plus, voltage u~minus, voltage Vss, voltage Vdd) : <br>
+        <br>
+    &emsp;if (u~minus >= Vdd)<br><br>
+    &emsp;&emsp; V_out = Vss <br> <br>
+    &emsp;else<br> <br>
+    &emsp;&emsp; V_out = Vdd<br>
+        <br>
+
+    &emsp;&emsp; output V_out <br>
+
+</div>
+</div>
+    </tr>
+<div>
+<div style="float:left; color:white; background:black; font-family: Menlo,serif;">
+
+    <div style="height:50px; width:200px; color:lightgrey; font-size: large;">
+
+        • Vᴏᴜᴛ <br>
+        • V₁ <br>
+        • V₂
+
+
+        <br></div>
+
+<canvas id="mycanvas" width="1000" height="300" style="float:right;"></canvas>
+</div>
+
+
+<script src="volta_language/volta.js"></script>
+<script src="volta_language/output%0A_wave.js"></script>
+
+</body>
+</html>
